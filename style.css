@@ -51,7 +51,7 @@ The designs were created to the following widths:
 }
 @media(min-width:40em){
     :root{
-        font-size: 1.6rem;
+        font-size: calc(1em  + 0.5vh);
     }
 }
 *,
@@ -125,6 +125,9 @@ h2 {
   .split > * {
     flex: 1 1 100%;
   }
+  .container{
+    padding: 1rem;
+  }
 }
 .card {
   border-radius: 1rem;
@@ -147,7 +150,7 @@ h2 {
   flex-direction: column;
 }
 
-
+picture{display: flex;}
 picture > img {
   border-radius: 1rem 1rem 0 0;
 }
@@ -159,6 +162,7 @@ picture > img {
       }
       
   picture > img {
+
     border-radius: 1rem 0 0 1rem;
   }
 }
