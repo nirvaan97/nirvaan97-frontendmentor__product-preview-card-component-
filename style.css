@@ -1,0 +1,193 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+/* ## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700 */
+
+:root {
+  --clr-primary-cyan: hsl(158, 37%, 31%);
+  --clr-primary-cream: hsl(30, 38%, 92%);
+
+  --clr-neutral-500: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fs-100: 0.875rem;
+  --ff-montserrat: "Montserrat";
+  --ff: "Fraunces", serif;
+  --fw-500: 500;
+  --fw-700: 700;
+  box-sizing: border-box;
+}
+@media(min-width:40em){
+    :root{
+        font-size: 1.6rem;
+    }
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-size: var(--fs-100);
+  font-family: var(--ff-montserrat);
+  line-height: 1.6;
+  color: var(--clr-neutral-500);
+  background: var(--clr-primary-cream);
+}
+.container {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+}
+/* typography */
+h1 {
+  font-size: var(--fs-100);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+h2,
+span:first-child {
+  font-size: 2rem;
+  font-family: var(--ff);
+}
+
+h2 {
+  line-height: 1;
+}
+
+/* utility classes */
+
+.bg-accent {
+  --fg: var(--clr-neutral-100);
+  --bg: var(--clr-primary-cyan);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+
+  }
+  .split > * {
+    flex: 1 1 100%;
+  }
+}
+.card {
+  border-radius: 1rem;
+  /* outline: 2px solid; */
+  background: var(--clr-neutral-100);
+  width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 40em) {
+  .card {
+    width: auto;
+  }
+}
+
+.card-description {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+
+picture > img {
+  border-radius: 1rem 1rem 0 0;
+}
+@media (min-width: 40em) {
+
+    .card-description {
+     justify-content: space-evenly;
+   
+      }
+      
+  picture > img {
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+.pricing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  background: var(--bg);
+  color: var(--fg);
+  padding: 1em 2em;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  /* text-transform: uppercase; */
+  font-weight: var(--fw-700);
+  text-decoration: none;
+  border-radius: 0.7em;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  opacity: 1;
+}
+.price {
+  color: var(--clr-primary-cyan);
+}
